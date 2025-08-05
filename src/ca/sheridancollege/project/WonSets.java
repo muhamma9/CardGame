@@ -1,8 +1,11 @@
 package ca.sheridancollege.project;
 
+import java.util.List;
+import java.util.Map;
+
 public class WonSets {
 
-	private KeyValuePair<Player, Array<Rank>> playerWonSets;
+	private Map<Player, List<Rank>> playerWonSets;
 
 	public WonSets() {
 		// TODO - implement WonSets.WonSets

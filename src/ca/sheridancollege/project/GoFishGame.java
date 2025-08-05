@@ -14,7 +14,7 @@ public abstract class GoFishGame {
 	/**
 	 * the title of the game
 	 */
-	private Collection<Array<Player>> players;
+	private List<Player> players;
 
 	/**
 	 * the players of the game

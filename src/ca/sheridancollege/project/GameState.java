@@ -1,8 +1,10 @@
 package ca.sheridancollege.project;
 
+import java.util.Map;
+
 public class GameState {
 
-	private KeyValuePair<Player, Int> playerHandSize;
+	private Map<Player, Integer> playerHandSize;
 	private WonSets wonSets;
 
 	public GameState() {

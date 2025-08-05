@@ -1,8 +1,10 @@
 package ca.sheridancollege.project;
 
+import java.util.List;
+
 public class Deck {
 
-	private Array<Card> deckOfCards;
+	private List<Card> deckOfCards;
 	private boolean isEmpty;
 
 	public Deck() {

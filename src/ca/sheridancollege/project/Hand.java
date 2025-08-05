@@ -1,8 +1,10 @@
 package ca.sheridancollege.project;
 
+import java.util.List;
+
 public class Hand {
 
-	private Array<Card> handOfCards;
+	private List<Card> handOfCards;
 	private boolean isEmpty;
 
 	/**
