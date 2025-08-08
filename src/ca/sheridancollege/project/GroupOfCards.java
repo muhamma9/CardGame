@@ -15,19 +15,30 @@ public class GroupOfCards {
 	/**
 	 * The group of cards, stored in an ArrayList
 	 */
-	private Collection<Card> cards;
+	private List<Card> cards;
 
 	public int getSize() {
-		return this.size;
+		return cards.size();
 	}
 
 	public void setSize(int size) {
 		this.size = size;
 	}
 
-	public Collection<Card> getCards() {
+	public List<Card> getCards() {
 		return this.cards;
 	}
+        
+        public void addCard(Card inputCard) {
+            cards.add(inputCard);
+	}
+        
+        public Card getCard(){
+            Card card = cards.getFirst();
+            cards.removeFirst();
+            return card;
+        }
+
 
 	/**
 	 * the size of the grouping
@@ -38,9 +49,9 @@ public class GroupOfCards {
 		throw new UnsupportedOperationException();
 	}
 
-	public void shuffle() {
-		// TODO - implement GroupOfCards.shuffle
-		throw new UnsupportedOperationException();
-	}
+//	public void shuffle() {
+//		// TODO - implement GroupOfCards.shuffle
+//		throw new UnsupportedOperationException();
+//	}
 
 }

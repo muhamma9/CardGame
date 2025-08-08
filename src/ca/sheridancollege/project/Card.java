@@ -2,22 +2,53 @@ package ca.sheridancollege.project;
 
 public class Card {
 
-	private Rank cardRank;
-	private Suit cardSuit;
+    private Rank cardRank;
+    private Suit cardSuit;
 
-	public String toString() {
-		// TODO - implement Card.toString
-		throw new UnsupportedOperationException();
-	}
+    /**
+     *
+     * @param rank
+     * @param suit
+     */
+    public Card(Rank rank, Suit suit) {
+        this.cardRank = rank;
+        this.cardSuit = suit;
 
-	/**
-	 * 
-	 * @param rank
-	 * @param suit
-	 */
-	public Card(Rank rank, Suit suit) {
-		// TODO - implement Card.Card
-		throw new UnsupportedOperationException();
-	}
+    }
+
+    /**
+     * @return the cardRank
+     */
+    public Rank getCardRank() {
+        return cardRank;
+    }
+
+    /**
+     * @param cardRank the cardRank to set
+     */
+    public void setCardRank(Rank cardRank) {
+        this.cardRank = cardRank;
+    }
+
+    /**
+     * @return the cardSuit
+     */
+    public Suit getCardSuit() {
+        return cardSuit;
+    }
+
+    /**
+     * @param cardSuit the cardSuit to set
+     */
+    public void setCardSuit(Suit cardSuit) {
+        this.cardSuit = cardSuit;
+    }
+
+    @Override
+    public String toString() {
+
+        return getCardRank() + "of " + getCardSuit();
+
+    }
 
 }

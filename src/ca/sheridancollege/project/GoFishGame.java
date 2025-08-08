@@ -15,13 +15,26 @@ public abstract class GoFishGame {
 	 * the title of the game
 	 */
 	private List<Player> players;
+        private Deck deck;
 
 	/**
 	 * the players of the game
 	 */
-	public GoFishGame() {
-		// TODO - implement GoFishGame.GoFishGame
-		throw new UnsupportedOperationException();
+	public GoFishGame(int numOfPlayers) {
+            // create deck
+            // shuffle deck
+            // create players
+            // determine number of cards per player (7 cards for 2-3 players otherwise 5 cards) 
+            // deal cards to the players
+            // deal the remaining cards to groupOfCards
+            
+            
+            //play turns
+                // player turn
+                // check game state
+            
+            //declare winner
+                
 	}
 
 	/**

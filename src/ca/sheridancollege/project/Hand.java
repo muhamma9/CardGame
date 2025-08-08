@@ -1,40 +1,65 @@
 package ca.sheridancollege.project;
 
-import java.util.List;
+import java.util.*;
 
 public class Hand {
 
 	private List<Card> handOfCards;
-	private boolean isEmpty;
 
-	/**
-	 * 
-	 * @param handSize
-	 */
-	public Hand(int handSize) {
-		// TODO - implement Hand.Hand
-		throw new UnsupportedOperationException();
-	}
 
-	public boolean getIsEmpty() {
-		return this.isEmpty;
-	}
+        // The hand originally starts off empty, no need to add a count. 
+        public Hand() {}
+        
 
-	/**
-	 * 
-	 * @param isEmpty
-	 */
-	public void setIsEmpty(boolean isEmpty) {
-		this.isEmpty = isEmpty;
+	public boolean isEmpty() {
+		return handOfCards.isEmpty();
 	}
+        
+        
+        public List<Card> findCardsByRank(Rank rank){
+            List<Card> foundCards = new ArrayList<Card>();
+            for(Card card: handOfCards){
+                if(card.getCardRank()==rank){
+                    foundCards.add(card);
+                }
+            }
+            
+            removeRank(rank);
+            
+            return foundCards;
+        }
+        
+        
+        
+        public boolean findSet(Rank rank){
+            int count=0;
+            for(Card card: handOfCards){
+                if(card.getCardRank()==rank){
+                    count++;
+                }
+            }
+            return count==4;
+        }
+        
+        public void removeRank(Rank rank){
+            for(Card card: handOfCards){
+                if(card.getCardRank() == rank){
+                    removeCard(card);
+                }
+            }            
+        }
+
 
 	/**
 	 * 
 	 * @param inputCard
 	 */
 	public Card removeCard(Card inputCard) {
-		// TODO - implement Hand.removeCard
-		throw new UnsupportedOperationException();
+            
+                if(handOfCards.contains(inputCard))
+                    handOfCards.remove(inputCard);
+                
+                return inputCard;
 	}
 
 	/**
@@ -42,13 +67,18 @@ public class Hand {
 	 * @param inputCard
 	 */
 	public void addCard(Card inputCard) {
-		// TODO - implement Hand.addCard
-		throw new UnsupportedOperationException();
+            handOfCards.add(inputCard);
 	}
+        
+        
+        public void addCards(List<Card> inputCards){
+            for(Card card: inputCards){
+                addCard(card);
+            }
+        }
 
 	public int getHandSize() {
-		// TODO - implement Hand.getHandSize
-		throw new UnsupportedOperationException();
+            return handOfCards.size();
 	}
 
 }
