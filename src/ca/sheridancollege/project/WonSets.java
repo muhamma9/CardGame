@@ -16,6 +16,14 @@ public class WonSets {
             playerWonSets.put(player, new ArrayList<>());
         }
     }
+    
+    public int amountSetsWon(){
+        int total = 0;
+        for (Map.Entry<Player, List<Rank>> entry : this.playerWonSets.entrySet()){
+            total+=entry.getValue().size();
+        }
+        return total;
+    }
 
     /**
      *

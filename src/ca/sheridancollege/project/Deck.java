@@ -1,5 +1,6 @@
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
@@ -9,10 +10,12 @@ public class Deck {
         
         // In the constructor the 52 cards will be generated based on suit and rank.
 	public Deck() {
+            deckOfCards = new ArrayList<>();
             for(int s=0; s<Suit.values().length; s++){
                 for(int r=0; r<Rank.values().length; r++){
+                    if(Rank.values()[r]!=Rank.JOKER){
                     Card card = new Card(Rank.values()[r], Suit.values()[s]);
-                    deckOfCards.add(card);
+                    deckOfCards.add(card);}
                 }
             }
 	}

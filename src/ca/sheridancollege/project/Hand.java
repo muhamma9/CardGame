@@ -8,7 +8,9 @@ public class Hand {
 
 
         // The hand originally starts off empty, no need to add a count. 
-        public Hand() {}
+        public Hand() {
+            this.handOfCards = new ArrayList<>();
+        }
         
 
 	public boolean isEmpty() {

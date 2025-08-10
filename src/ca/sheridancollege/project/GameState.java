@@ -29,39 +29,39 @@ public class GameState {
      */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        String gs = "";
 
-        sb.append("--- CURRENT GAME STATE ---\n");
-        sb.append("Timestamp: ").append(java.time.LocalDateTime.now().toString()).append("\n\n");
+        gs+="--- CURRENT GAME STATE ---\n";
+        gs+="Timestamp: "+java.time.LocalDateTime.now().toString()+"\n\n";
 
         // Section for Player Hand Sizes
-        sb.append("Player Hand Sizes:\n");
-        sb.append("--------------------\n");
+        gs+="Player Hand Sizes:\n";
+        gs+="--------------------\n";
         if (playerHandSize.isEmpty()) {
-            sb.append("No players in the game.\n");
+            gs+="No players in the game.\n";
         } else {
             for (Map.Entry<Player, Integer> entry : this.playerHandSize.entrySet()) {
-                sb.append(entry.getKey().toString()) // Player's name
-                  .append(": ")
-                  .append(entry.getValue()) // Hand size
-                  .append(" cards\n");
+                gs+=entry.getKey().toString() // Player's name
+                  +": "
+                  +entry.getValue() // Hand size
+                  +" cards\n";
             }
         }
         
-        sb.append("\n"); // Add a blank line for spacing
+        gs+="\n"; // Add a blank line for spacing
 
         // Section for Won Sets
-        sb.append("Won Sets:\n");
-        sb.append("--------------------\n");
+        gs+="Won Sets:\n";
+        gs+="--------------------\n";
         if (this.wonSets == null) {
-            sb.append("Won sets information is not available.\n");
+            gs+="Won sets information is not available.\n";
         } else {
             // We can reuse the excellent toString() method we wrote for WonSets
-            sb.append(this.wonSets.toString());
+            gs+=this.wonSets.toString();
         }
         
-        sb.append("--------------------------\n");
+        gs+="--------------------------\n";
 
-        return sb.toString();
+        return gs;
     }
 }
