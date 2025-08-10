@@ -3,8 +3,7 @@ package ca.sheridancollege.project;
 public class PlayerTurn {
 
 	public PlayerTurn() {
-		// TODO - implement PlayerTurn.PlayerTurn
-		throw new UnsupportedOperationException();
+		
 	}
 
 	/**
@@ -13,9 +12,8 @@ public class PlayerTurn {
 	 * @param targetPlayer
 	 * @param card
 	 */
-	public void checkPlayerCard(Player requestingPlayer, Player targetPlayer, Card card) {
-		// TODO - implement PlayerTurn.checkPlayerCard
-		throw new UnsupportedOperationException();
+	public static void checkPlayerCard(Player requestingPlayer, Player targetPlayer, Card card) {
+		
 	}
 
 }

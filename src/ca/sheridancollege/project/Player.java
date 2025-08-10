@@ -48,5 +48,9 @@ public class Player {
         public List<Card> giveCard(Rank rank){
             return playerHand.findCardsByRank(rank);
         }
+        
+        public int getHandSize() {
+            return this.playerHand.getHandSize();
+	}
 
 }
