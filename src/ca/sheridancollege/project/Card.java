@@ -47,7 +47,7 @@ public class Card {
     @Override
     public String toString() {
 
-        return getCardRank() + "of " + getCardSuit();
+        return getCardRank() + " of " + getCardSuit();
 
     }
 

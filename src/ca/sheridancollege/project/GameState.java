@@ -23,12 +23,19 @@ public class GameState {
         this.wonSets = wonSets;
     }
 
+    
+    public void updateHandSize() {
+        for (Map.Entry<Player, Integer> entry : this.playerHandSize.entrySet()) {
+                entry.setValue(entry.getKey().getHandSize());
+            }
+    }
     /**
      * Generates a string representation of the entire game state,
      * including hand sizes and all won sets.
      */
     @Override
     public String toString() {
+        this.updateHandSize();
         String gs = "";
 
         gs+="--- CURRENT GAME STATE ---\n";

@@ -62,5 +62,9 @@ public class Player {
     public String toString() {
         return this.name;
     }
+    
+    public String getHand() {
+        return this.playerHand.toString();
+    }
 
 }

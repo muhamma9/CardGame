@@ -8,7 +8,7 @@ public class Deck {
 	private List<Card> deckOfCards;
         
         
-        // In the constructor the 52 cards will be generated based on suit and rank.
+        // In the constructor the 48 cards will be generated based on suit and rank.
 	public Deck() {
             deckOfCards = new ArrayList<>();
             for(int s=0; s<Suit.values().length; s++){
@@ -22,8 +22,8 @@ public class Deck {
         
         public void shuffle(){            
             for(int i=0; i<100; i++){
-                int firstCard = (int)(Math.random()*52);
-                int secondCard = (int)(Math.random()*52);
+                int firstCard = (int)(Math.random()*48);
+                int secondCard = (int)(Math.random()*48);
                 Card temp = deckOfCards.get(firstCard);
                 deckOfCards.set(firstCard, deckOfCards.get(secondCard));
                 deckOfCards.set(secondCard, temp);

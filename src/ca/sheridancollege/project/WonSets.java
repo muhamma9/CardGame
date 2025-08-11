@@ -24,6 +24,10 @@ public class WonSets {
         }
         return total;
     }
+    
+    public int amountPlayerSetsWon(Player player){
+        return this.playerWonSets.get(player).size();
+    }
 
     /**
      *
@@ -47,6 +51,19 @@ public class WonSets {
         sb+="\n";
     }
     return sb;
+    }
+    
+    public Player getWinner() {
+        Player winner = null;
+        int maxSets = -1;
+
+        for (Map.Entry<Player, List<Rank>> entry : playerWonSets.entrySet()) {
+            if (entry.getValue().size() > maxSets) {
+                maxSets = entry.getValue().size();
+                winner = entry.getKey();
+            }
+        }
+        return winner;
     }
 
 }

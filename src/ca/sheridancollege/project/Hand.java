@@ -82,5 +82,11 @@ public class Hand {
 	public int getHandSize() {
             return handOfCards.size();
 	}
+        
+        @Override
+        public String toString() {
+            return handOfCards.toString();
+        }
+        
 
 }
