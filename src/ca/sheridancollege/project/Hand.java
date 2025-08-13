@@ -44,24 +44,35 @@ public class Hand {
         }
         
         public void removeRank(Rank rank){
-            for(Card card: handOfCards){
+//            for(Card card: handOfCards){
+//                if(card.getCardRank() ==rank){
+//                    removeCard(card);
+//                }
+//            }            
+          List<Card> toRemove = new ArrayList<>();
+            
+             for(Card card: handOfCards){
                 if(card.getCardRank() == rank){
-                    removeCard(card);
+                    toRemove.add(card);
                 }
-            }            
-        }
+             }
+               for (Card card : toRemove){
+                removeCard(card);
+            }
+            }
 
 
 	/**
 	 * 
 	 * @param inputCard
+         * @return inputCard
 	 */
 	public Card removeCard(Card inputCard) {
             
                 if(handOfCards.contains(inputCard))
                     handOfCards.remove(inputCard);
                 
-                return inputCard;
+                return inputCard; 
 	}
 
 	/**

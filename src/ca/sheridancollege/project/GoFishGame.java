@@ -91,7 +91,7 @@ public class GoFishGame {
             if (!currentPlayer.askForCard(targetPlayer, requestedRank)) {
                 if (!deck.isEmpty()) {
                     Card drawnCard = deck.dealCard();
-                    System.out.println(currentPlayer + " drew a " + drawnCard);
+                    System.out.println(currentPlayer + " drew a card from the deck" );
                     currentPlayer.addCard(drawnCard);
                 } else {
                     System.out.println("The deck is empty.");
