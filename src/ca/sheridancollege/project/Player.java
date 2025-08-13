@@ -43,7 +43,12 @@ public class Player {
     }
 
     public boolean findWonSet(Rank rank) {
-        return playerHand.findSet(rank);
+        if(playerHand.findSet(rank)){
+            playerHand.removeRank(rank);
+            return true;
+                    
+        }
+        return false;
     }
 
     public List<Card> giveCard(Rank rank) {
